@@ -2,7 +2,7 @@
 
 namespace App\Aplicacao\Pedido;
 
-use App\Dominio\Produto\Interfaces\RepositorioPedido;
+use App\Dominio\Pedido\Interfaces\RepositorioPedido;
 
 class BuscarPedidos
 {
