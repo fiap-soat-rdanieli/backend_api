@@ -1,0 +1,2 @@
+[2023-06-18 19:37:50+00:00][CRITICAL] Return value of Sohris\Core\Server::getComponent() must be an instance of Sohris\Core\ComponentControl, null returned []
+[2023-06-18 19:40:46+00:00][CRITICAL] Return value of Sohris\Core\Server::getComponent() must be an instance of Sohris\Core\ComponentControl, null returned []

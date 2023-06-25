@@ -1,0 +1,64 @@
+[2023-06-25 16:28:45+00:00][DEBUG] Exec Query : SELECT * FROM soat.clientes WHERE cpf = :cpf {"cpf":{"App\\Dominio\\Cliente\\Cpf":"123123123"}}
+[2023-06-25 16:29:31+00:00][DEBUG] Exec Query : SELECT * FROM soat.clientes WHERE cpf = :cpf {"cpf":{"App\\Dominio\\Cliente\\Cpf":"123123123"}}
+[2023-06-25 16:30:17+00:00][DEBUG] Exec Query : SELECT * FROM soat.cliente WHERE cpf = :cpf {"cpf":{"App\\Dominio\\Cliente\\Cpf":"123123123"}}
+[2023-06-25 16:30:57+00:00][DEBUG] Exec Query : INSERT INTO soat.cliente VALUES (:cpf, :name, :email); {"cpf":{"App\\Dominio\\Cliente\\Cpf":"123123123"},"name":"Rodrigo Mariano","email":{"App\\Dominio\\Cliente\\Email":"rodri.merlucci@gmail.com"}}
+[2023-06-25 16:31:02+00:00][DEBUG] Exec Query : SELECT * FROM soat.cliente WHERE cpf = :cpf {"cpf":{"App\\Dominio\\Cliente\\Cpf":"123123123"}}
+[2023-06-25 16:31:35+00:00][DEBUG] Exec Query : SELECT * FROM soat.cliente; []
+[2023-06-25 16:44:06+00:00][DEBUG] Exec Query : SELECT * FROM soat.cliente; []
+[2023-06-25 16:44:10+00:00][DEBUG] Exec Query : SELECT * FROM soat.cliente; []
+[2023-06-25 16:44:11+00:00][DEBUG] Exec Query : SELECT * FROM soat.cliente; []
+[2023-06-25 16:44:13+00:00][DEBUG] Exec Query : SELECT * FROM soat.cliente; []
+[2023-06-25 16:44:14+00:00][DEBUG] Exec Query : SELECT * FROM soat.cliente; []
+[2023-06-25 16:44:14+00:00][DEBUG] Exec Query : SELECT * FROM soat.cliente; []
+[2023-06-25 16:44:15+00:00][DEBUG] Exec Query : SELECT * FROM soat.cliente; []
+[2023-06-25 16:44:15+00:00][DEBUG] Exec Query : SELECT * FROM soat.cliente; []
+[2023-06-25 16:44:16+00:00][DEBUG] Exec Query : SELECT * FROM soat.cliente; []
+[2023-06-25 16:44:17+00:00][DEBUG] Exec Query : SELECT * FROM soat.cliente; []
+[2023-06-25 16:44:17+00:00][DEBUG] Exec Query : SELECT * FROM soat.cliente; []
+[2023-06-25 16:44:19+00:00][DEBUG] Exec Query : SELECT * FROM soat.cliente; []
+[2023-06-25 17:00:05+00:00][DEBUG] Exec Query : INSERT INTO soat.produto VALUES (:id, :nome, :desc, :cat, :valor); {"id":"18e1ae58-652a-48f4-8547-bb44e59dee20","nome":"Coca-Cola","desc":"Bebida Gelada!","cat":"bebida","valor":"7.9"}
+[2023-06-25 17:00:15+00:00][DEBUG] Exec Query : SELECT * FROM soat.produto; []
+[2023-06-25 17:00:38+00:00][DEBUG] Exec Query : SELECT * FROM soat.produto; []
+[2023-06-25 17:00:46+00:00][DEBUG] Exec Query : SELECT * FROM soat.produto; []
+[2023-06-25 17:00:50+00:00][DEBUG] Exec Query : SELECT * FROM soat.produto; []
+[2023-06-25 17:01:04+00:00][DEBUG] Exec Query : INSERT INTO soat.produto VALUES (:id, :nome, :desc, :cat, :valor); {"id":"b2eef1fa-892b-43f2-ad02-c22bd304c132","nome":"Coca-Cola Zero","desc":"Bebida Gelada Sem Açucar!","cat":"bebida","valor":"7.9"}
+[2023-06-25 17:01:08+00:00][DEBUG] Exec Query : INSERT INTO soat.produto VALUES (:id, :nome, :desc, :cat, :valor); {"id":"d206f513-7d62-43ee-a82c-614f6f27156c","nome":"Guarana Zero","desc":"Bebida Gelada Sem Açucar!","cat":"bebida","valor":"7.9"}
+[2023-06-25 17:01:11+00:00][DEBUG] Exec Query : INSERT INTO soat.produto VALUES (:id, :nome, :desc, :cat, :valor); {"id":"4641f771-2026-41ee-b212-fc870704f9dd","nome":"Guarana","desc":"Bebida Gelada!","cat":"bebida","valor":"7.9"}
+[2023-06-25 17:01:17+00:00][DEBUG] Exec Query : SELECT * FROM soat.produto; []
+[2023-06-25 17:02:13+00:00][DEBUG] Exec Query : UPDATE soat.produto SET descricao = :descricao {"descricao":"Bebida Nao Geleda"}
+[2023-06-25 17:02:20+00:00][DEBUG] Exec Query : SELECT * FROM soat.produto; []
+[2023-06-25 17:02:40+00:00][DEBUG] Exec Query : DELETE FROM soat.produto WHERE id = :id {"id":{"App\\Shared\\ProdutoId":"4641f771-2026-41ee-b212-fc870704f9dd"}}
+[2023-06-25 17:02:45+00:00][DEBUG] Exec Query : SELECT * FROM soat.produto; []
+[2023-06-25 17:04:01+00:00][DEBUG] Exec Query : INSERT INTO soat.produto VALUES (:id, :nome, :desc, :cat, :valor); {"id":"b1b151ad-e671-4cd9-a149-f7e089e2296d","nome":"BigMac","desc":"Dois hamburgueres alface queijo molho especial, cebola e picles em um pao com gergilim","cat":"lanche","valor":"19.9"}
+[2023-06-25 17:04:16+00:00][DEBUG] Exec Query : SELECT * FROM soat.produto WHERE categoria = :cat {"cat":{"App\\Dominio\\Produto\\Propriedades\\Categorias":"lanche"}}
+[2023-06-25 17:04:21+00:00][DEBUG] Exec Query : SELECT * FROM soat.produto WHERE categoria = :cat {"cat":{"App\\Dominio\\Produto\\Propriedades\\Categorias":"bebida"}}
+[2023-06-25 18:36:15+00:00][DEBUG] Exec Query : SELECT count(0) + 1 as pedido FROM soat.pedido WHERE timestamp_criado >= UNIX_TIMESTAMP(DATE'2023-06-25') []
+[2023-06-25 18:36:52+00:00][DEBUG] Exec Query : SELECT count(0) + 1 as pedido FROM soat.pedido WHERE timestamp_criado >= UNIX_TIMESTAMP(DATE'2023-06-25') []
+[2023-06-25 18:36:52+00:00][DEBUG] Exec Query : INSERT INTO soat.pedido VALUES (:id, :ref, :cpf, :status, :criado, 0, 0); {"id":"2f03f9df-d2da-4375-b111-2a40fe18e9cc","ref":"1","cpf":{"App\\Dominio\\Cliente\\Cpf":""},"status":"Criado","criado":"1687718212"}
+[2023-06-25 18:37:38+00:00][DEBUG] Exec Query : SELECT count(0) + 1 as pedido FROM soat.pedido WHERE timestamp_criado >= UNIX_TIMESTAMP(DATE'2023-06-25') []
+[2023-06-25 18:37:38+00:00][DEBUG] Exec Query : INSERT INTO soat.pedido VALUES (:id, :ref, :cpf, :status, :criado, 0, 0); {"id":"da3be3dd-45c2-4dd8-87b2-3868f0962d6c","ref":"2","cpf":{"App\\Dominio\\Cliente\\Cpf":"123123123"},"status":"Criado","criado":"1687718258"}
+[2023-06-25 18:38:10+00:00][DEBUG] Exec Query : SELECT * FROM soat.pedido p LEFT JOIN soat.cliente c ON p.cpf = c.cpf WHERE p.status = :status; {"status":"Criado"}
+[2023-06-25 18:38:45+00:00][DEBUG] Exec Query : SELECT * FROM soat.pedido p LEFT JOIN soat.cliente c ON p.cliente_cpf = c.cpf WHERE p.status = :status; {"status":"Criado"}
+[2023-06-25 18:40:00+00:00][DEBUG] Exec Query : SELECT * FROM soat.pedido p LEFT JOIN soat.cliente c ON p.cliente_cpf = c.cpf WHERE p.status = :status; {"status":"Criado"}
+[2023-06-25 18:40:52+00:00][DEBUG] Exec Query : SELECT * FROM soat.pedido p LEFT JOIN soat.cliente c ON p.cliente_cpf = c.cpf WHERE p.status = :status; {"status":"Criado"}
+[2023-06-25 18:41:10+00:00][DEBUG] Exec Query : SELECT * FROM soat.pedido p LEFT JOIN soat.cliente c ON p.cliente_cpf = c.cpf WHERE p.status = :status; {"status":"Criado"}
+[2023-06-25 18:41:31+00:00][DEBUG] Exec Query : SELECT * FROM soat.pedido p LEFT JOIN soat.cliente c ON p.cliente_cpf = c.cpf WHERE p.status = :status; {"status":"Criado"}
+[2023-06-25 18:42:25+00:00][DEBUG] Exec Query : SELECT * FROM soat.pedido p LEFT JOIN soat.cliente c ON p.cliente_cpf = c.cpf WHERE p.status = :status; {"status":"Criado"}
+[2023-06-25 18:43:35+00:00][DEBUG] Exec Query : SELECT * FROM soat.pedido p LEFT JOIN soat.cliente c ON p.cliente_cpf = c.cpf WHERE p.status = :status; {"status":"Criado"}
+[2023-06-25 18:45:06+00:00][DEBUG] Exec Query : SELECT count(0) + 1 as pedido FROM soat.pedido WHERE timestamp_criado >= UNIX_TIMESTAMP(DATE'2023-06-25') []
+[2023-06-25 18:45:06+00:00][DEBUG] Exec Query : INSERT INTO soat.pedido VALUES (:id, :ref, :cpf, :status, :criado, 0, 0); {"id":"8fdeb345-2417-41bb-af7f-f73d9d14b3a4","ref":"3","cpf":{"App\\Dominio\\Cliente\\Cpf":"123123123"},"status":"Criado","criado":"1687718705"}
+[2023-06-25 18:45:59+00:00][DEBUG] Exec Query : SELECT count(0) + 1 as pedido FROM soat.pedido WHERE timestamp_criado >= UNIX_TIMESTAMP(DATE'2023-06-25') []
+[2023-06-25 18:45:59+00:00][DEBUG] Exec Query : INSERT INTO soat.pedido VALUES (:id, :ref, :cpf, :status, :criado, 0, 0); {"id":"97b3be33-7050-4c77-81cd-221e878d8103","ref":"4","cpf":{"App\\Dominio\\Cliente\\Cpf":"123123123"},"status":"Criado","criado":"1687718759"}
+[2023-06-25 18:48:21+00:00][DEBUG] Exec Query : SELECT * FROM soat.pedido p LEFT JOIN soat.cliente c ON p.cliente_cpf = c.cpf; []
+[2023-06-25 19:02:51+00:00][DEBUG] Exec Query : INSERT INTO soat.pedido_produtos VALUES (:ped_id,:prod_id, :quant, :obs) {"ped_id":{"App\\Shared\\PedidoId":"97b3be33-7050-4c77-81cd-221e878d8103"},"prod_id":{"App\\Shared\\ProdutoId":"b1b151ad-e671-4cd9-a149-f7e089e2296d"},"quant":3,"obs":"prosac"}
+[2023-06-25 19:03:10+00:00][DEBUG] Exec Query : INSERT INTO soat.pedido_produtos VALUES (:ped_id,:prod_id, :quant, :obs) {"ped_id":{"App\\Shared\\PedidoId":"97b3be33-7050-4c77-81cd-221e878d8103"},"prod_id":{"App\\Shared\\ProdutoId":"b1b151ad-e671-4cd9-a149-f7e089e2296d"},"quant":3,"obs":"prosac"}
+[2023-06-25 19:04:22+00:00][DEBUG] Exec Query : INSERT INTO soat.pedido_produtos VALUES (:ped_id,:prod_id, :quant, :obs) {"ped_id":{"App\\Shared\\PedidoId":"97b3be33-7050-4c77-81cd-221e878d8103"},"prod_id":{"App\\Shared\\ProdutoId":"b1b151ad-e671-4cd9-a149-f7e089e2296d"},"quant":3,"obs":"prosac"}
+[2023-06-25 19:04:23+00:00][DEBUG] Exec Query : INSERT INTO soat.pedido_produtos VALUES (:ped_id,:prod_id, :quant, :obs) {"ped_id":{"App\\Shared\\PedidoId":"97b3be33-7050-4c77-81cd-221e878d8103"},"prod_id":{"App\\Shared\\ProdutoId":"b1b151ad-e671-4cd9-a149-f7e089e2296d"},"quant":3,"obs":"prosac"}
+[2023-06-25 19:04:54+00:00][DEBUG] Exec Query : INSERT REPLACE soat.pedido_produtos VALUES (:ped_id,:prod_id, :quant, :obs) {"ped_id":{"App\\Shared\\PedidoId":"97b3be33-7050-4c77-81cd-221e878d8103"},"prod_id":{"App\\Shared\\ProdutoId":"b1b151ad-e671-4cd9-a149-f7e089e2296d"},"quant":3,"obs":"prosac"}
+[2023-06-25 19:05:07+00:00][DEBUG] Exec Query : INSERT IGNORE soat.pedido_produtos VALUES (:ped_id,:prod_id, :quant, :obs) {"ped_id":{"App\\Shared\\PedidoId":"97b3be33-7050-4c77-81cd-221e878d8103"},"prod_id":{"App\\Shared\\ProdutoId":"b1b151ad-e671-4cd9-a149-f7e089e2296d"},"quant":3,"obs":"prosac"}
+[2023-06-25 19:05:15+00:00][DEBUG] Exec Query : INSERT IGNORE soat.pedido_produtos VALUES (:ped_id,:prod_id, :quant, :obs) {"ped_id":{"App\\Shared\\PedidoId":"97b3be33-7050-4c77-81cd-221e878d8103"},"prod_id":{"App\\Shared\\ProdutoId":"b1b151ad-e671-4cd9-a149-f7e089e2296d"},"quant":4,"obs":"prosac"}
+[2023-06-25 19:05:51+00:00][DEBUG] Exec Query : SELECT * FROM soat.pedido_produtos WHERE pedido_id = :id {"id":{"App\\Shared\\PedidoId":"97b3be33-7050-4c77-81cd-221e878d8103"}}
+[2023-06-25 19:06:43+00:00][DEBUG] Exec Query : SELECT * FROM soat.pedido_produtos WHERE pedido_id = :id {"id":{"App\\Shared\\PedidoId":"97b3be33-7050-4c77-81cd-221e878d8103"}}
+[2023-06-25 19:07:17+00:00][DEBUG] Exec Query : SELECT * FROM soat.pedido_produtos WHERE pedido_id = :id {"id":{"App\\Shared\\PedidoId":"97b3be33-7050-4c77-81cd-221e878d8103"}}
+[2023-06-25 19:07:49+00:00][DEBUG] Exec Query : SELECT * FROM soat.pedido_produtos WHERE pedido_id = :id {"id":{"App\\Shared\\PedidoId":"97b3be33-7050-4c77-81cd-221e878d8103"}}
+[2023-06-25 19:20:34+00:00][DEBUG] Exec Query : UPDATE soat.pedido SET status = 'Checkout' , timestamp_checkout = UNIX_TIMESTAMP(NOW()) WHERE id = :id {"id":{"App\\Shared\\PedidoId":"97b3be33-7050-4c77-81cd-221e878d8103"}}
