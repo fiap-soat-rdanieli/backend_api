@@ -24,7 +24,7 @@ class Cliente extends DRMRouter
 
     /**
      *
-     * @Route("/api/cliente/lists")
+     * @Route("/api/cliente/lista")
      * @SessionJWT(false)
      * @HttpMethod("GET")
      */

@@ -92,14 +92,14 @@ class Pedido extends DRMRouter
      * @Route("/api/pedido/checkout")
      * @HttpMethod("POST")
      * @Needed({
-     *  "id"
+     *  "pedido_id"
      * })
      */
     public static function checkout(\Psr\Http\Message\ServerRequestInterface $request)
     {
         try {
             $dadosProduto = new CheckoutDto(
-                $request->REQUEST['id']
+                $request->REQUEST['pedido_id']
             );
             $repositorio = new RDBMS();
             $useCase = new Checkout($repositorio);
